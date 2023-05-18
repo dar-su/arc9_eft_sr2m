@@ -288,7 +288,7 @@ SWEP.HoldTypeSights = "rpg"
 SWEP.HoldTypeCustomize = "physgun"
 
 SWEP.WorldModelOffset = {
-    Pos = Vector(-13, 5.4, -6),
+    Pos = Vector(-13, 5.4, -4),
     Ang = Angle(-7, 0, 180),
     TPIKPos = Vector(-6, 5, -4), -- rpg
     TPIKAng = Angle(-11.5, 0, 180),
@@ -405,7 +405,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
             local rand = swep.EFTInspectnum
             if rand == 3 then swep.EFTInspectnum = 0 rand = 0 end
             if empty and rand == 0 then swep.EFTInspectnum = 1 rand = 1 end
-            rand = 2
+            
             if rand == 2 and !nomag then -- mag
                 ending = "_mag_" .. ending
                 
@@ -551,7 +551,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
 
         ["reload"] = {
             Source = "reload_single",
-            MinProgress = 0.85,
+            MinProgress = 0.92,
             FireASAP = true,
             EventTable = {
                 { s = path .. "sr2m_hand_out.ogg", t = 0.05 },
@@ -574,7 +574,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     
         ["reload0"] = {
             Source = "reload0",
-            MinProgress = 0.85,
+            MinProgress = 0.92,
             FireASAP = true,
             EventTable = {
                 { s =  path .. "sr2m_hand_out.ogg", t = 0.04 },
@@ -595,7 +595,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         },
         ["reload1"] = {
             Source = "reload1",
-            MinProgress = 0.85,
+            MinProgress = 0.92,
             FireASAP = true,
             EventTable = {
                 { s =  path .. "sr2m_hand_out.ogg", t = 0.04 },
@@ -617,7 +617,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     
         ["reload_empty0"] = {
             Source = {"reload_empty0_0", "reload_empty0_1"}, 
-            MinProgress = 0.85,
+            MinProgress = 0.92,
             FireASAP = true,
             EventTable = {
                 { s =  path .. "sr2m_hand_out.ogg", t = 0.06 },
@@ -643,7 +643,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         },
         ["reload_empty1"] = {
             Source = {"reload_empty1_0", "reload_empty1_1"}, 
-            MinProgress = 0.85,
+            MinProgress = 0.92,
             FireASAP = true,
             EventTable = {
                 { s =  path .. "sr2m_hand_out.ogg", t = 0.06 },
@@ -905,8 +905,8 @@ SWEP.Attachments = {
         Category = "eft_sr2m_hg",
         Bone = "mod_reciever",
         Pos = Vector(0, 5, -1),
-        Ang = Angle(0, -90, 0),
-        Icon_Offset = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, -1.5, 0),
     },
     {
         PrintName = "Pistol Grip",
@@ -954,7 +954,7 @@ SWEP.Attachments = {
     
     {
         PrintName = "Custom slot",
-        Category = {"eft_custom_slot", "eft_custom_slot_mp7"},
+        Category = {"eft_custom_slot", "eft_custom_slot_sr2m"},
         Bone = "mod_reciever",
         Pos = Vector(0, -5, -4),
         Ang = Angle(0, -90, 0),
@@ -962,7 +962,7 @@ SWEP.Attachments = {
     },
 }
 
-SWEP.EFTErgo = 65
+SWEP.EFTErgo = 59
 if ARC9EFTBASE then
     SWEP.AimDownSightsTimeHook = ARC9EFT.ErgoHook or nil
     SWEP.HoldBreathTimeHook = ARC9EFT.ErgoBreathHook or nil

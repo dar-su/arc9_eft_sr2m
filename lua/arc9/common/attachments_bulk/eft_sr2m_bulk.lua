@@ -73,6 +73,23 @@ ATT.HasHG = true
 ATT.EFTErgoAdd = 5
 ATT.CustomPros = { Ergonomics = "+5" }
 
+ATT.Attachments = {
+    {
+        PrintName = "R Mount",
+        Category = "eft_sr2m_rail",
+        Pos = Vector(0.75, 0.0, 0.4),
+        Ang = Angle(180, 90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = "L Mount",
+        Category = "eft_sr2m_rail",
+        Pos = Vector(-0.75, 0.0, 0.4),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
 ARC9.LoadAttachment(ATT, "eft_sr2m_hg_std")
 
 ///////////////////////////////////////      eft_sr2m_pg_std
@@ -115,6 +132,23 @@ ATT.HasHG = true
 ATT.EFTErgoAdd = 5
 ATT.CustomPros = { Ergonomics = "+5" }
 
+ATT.Attachments = {
+    {
+        PrintName = "R Mount",
+        Category = "eft_sr2m_rail",
+        Pos = Vector(0.75, 0.0, 0.4),
+        Ang = Angle(180, 90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = "L Mount",
+        Category = "eft_sr2m_rail",
+        Pos = Vector(-0.75, 0.0, 0.4),
+        Ang = Angle(0, -90, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
 ARC9.LoadAttachment(ATT, "eft_sr2m_hg_blk")
 
 ///////////////////////////////////////      eft_sr2m_pg_blk
@@ -138,6 +172,65 @@ ATT.EFTErgoAdd = 6
 ATT.CustomPros = { Ergonomics = "+6" }
 
 ARC9.LoadAttachment(ATT, "eft_sr2m_pg_blk")
+
+
+///////////////////////////////////////      eft_sr2m_rail_big
+
+ATT = {}
+
+ATT.PrintName = "SR-2M side rail"
+ATT.CompactName = "SR-2M"
+ATT.Icon = Material("entities/eft_sr2m_attachments/side.png", "mips smooth")
+ATT.Description = [[A side rail for SR-2M "Veresk" that allows installation of additional tactical equipment.]]
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/mount_sr2m_tochmash_med_rail.mdl"
+
+ATT.Category = {"eft_sr2m_rail"}
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.ModelOffset = Vector(0, 0, 0)
+
+ATT.Attachments = {
+    {
+        PrintName = "Tactical",
+        Category = "eft_tactical",
+        -- RejectAttachments = { ["eft_tactical_raptar"] = true },
+        Pos = Vector(-0.4, -0.36, 0),
+        Ang = Angle(0, 0, -90),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+ARC9.LoadAttachment(ATT, "eft_sr2m_rail_big")
+
+///////////////////////////////////////      eft_sr2m_rail_short
+
+ATT = {}
+
+ATT.PrintName = "SR-2M short side rail"
+ATT.CompactName = "SR-2M short."
+ATT.Icon = Material("entities/eft_sr2m_attachments/sides.png", "mips smooth")
+ATT.Description = [[A short side rail for SR-2M "Veresk" that allows installation of additional tactical equipment.]]
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/mount_sr2m_tochmash_short_rail.mdl"
+
+ATT.Category = {"eft_sr2m_rail"}
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.ModelOffset = Vector(0, 0, 0)
+
+ATT.Attachments = {
+    {
+        PrintName = "Tactical",
+        Category = "eft_tactical",
+        -- RejectAttachments = { ["eft_tactical_raptar"] = true },
+        Pos = Vector(-0.3, -0.32, 0),
+        Ang = Angle(0, 0, -90),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+ARC9.LoadAttachment(ATT, "eft_sr2m_rail_short")
 
 ///////////////////////////////////////      eft_sr2m_rec_std
 
