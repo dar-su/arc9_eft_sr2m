@@ -108,7 +108,7 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 SWEP.RecoilUp = 5
 SWEP.RecoilSide = 0.7
-SWEP.RecoilRandomUp = 0.1
+SWEP.RecoilRandomUp = 0.01
 SWEP.RecoilRandomSide = 0.61
 
 SWEP.ViewRecoil = false 
@@ -134,14 +134,14 @@ SWEP.VisualRecoilUp = 150*0.85
 SWEP.VisualRecoilSide = 10 
 SWEP.VisualRecoilRoll = 33 -- Roll tilt
 
-SWEP.VisualRecoilPunch = 60 -- How far back visual recoil moves the gun
-SWEP.VisualRecoilPunchSights = -450 -- How far back visual recoil moves the gun
+SWEP.VisualRecoilPunch = 30 -- How far back visual recoil moves the gun
+SWEP.VisualRecoilPunchSights = -250 -- How far back visual recoil moves the gun
 
 
 SWEP.VisualRecoilSpringPunchDamping = 8
 SWEP.VisualRecoilDampingConst = 350
 SWEP.VisualRecoilSpringMagnitude = 2 / 1.67
-SWEP.VisualRecoilPositionBumpUp = -0.05 
+SWEP.VisualRecoilPositionBumpUp = -0.02
 SWEP.VisualRecoilPositionBumpUpRTScope = -0.005
 SWEP.VisualRecoilPositionBumpUpHipFire = -0.01
 
@@ -162,7 +162,7 @@ SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount)
     if recamount > 2 then
         recamount = 1.25 - math.Clamp((recamount - 2) / 5, 0, 1)
         
-        local fakerandom = (((69+recamount%5*CurTime()%3)*2420)%4) * (1-recamount) * 1.5
+        local fakerandom = (((69+recamount%5*CurTime()%3)*2420)%4) * (1-recamount) * 1.2
         
         return up * recamount + fakerandom, side * 5, roll, punch * 0.5
     elseif recamount == 1 then
