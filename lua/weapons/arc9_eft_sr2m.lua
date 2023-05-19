@@ -25,7 +25,10 @@ SWEP.Trivia = {
 SWEP.Description = [[SR-2M "Veresk" is a compact submachine gun designed for a powerful 9x21mm armor-piercing cartridge by order of the FSB and the FSO of the Russian Federation. This submachine gun is part of a high-performance rifle complex designed for special forces. Equipped with a folding foregrip. Developed by TsNIItochmash.]]
 
 
--- SWEP.StandardPresets = {}
+SWEP.StandardPresets = {
+    "[FSB]XQAAAQCWAQAAAAAAAAA9iIIiM7tuo1AtT00OeFD858hFKrq+xXePmJfpPpQndI9fB5smK9tq7fFmw9sMkVWQ2HJtxt0Qgd5jA4HM51gXvvn0DN6Pkvjr68H+JzPQdkcgYThCcRXnJexa5btl0H33kvxEpjKOsa1fxjRXtfg1RvgScrgUCvJongbG/5LNTFaaG0KGqZwWb9JTfgilaREHvAqF3Kf4IlobOAA=",
+    "[TAC]XQAAAQDhAQAAAAAAAAA9iIIiM7tuo1AtT00OeFD858hFKrq+xXePmJfpPpQndI9fB5smK9tq7fFmw9sMkVWQ2HJtxt0Qgd5jA4HM51gXzhvulynGekGJGVIhcLPf+Jv5hRTEj/HRIyfj/4fUjQFyIXiWDKV2GlLiAh7p5tvo7ZKlYWztA1uHgzjrTpMcHxP3Tj0fPr+FlSMab65nVHwyUJyvLCLAmd6v4YOxx0xwtWTP2xvgV16YtKzG+/uDPGDC9p6PMe/mYAA="
+}
 
 SWEP.BarrelLength = 17
 SWEP.Slot = 2
@@ -274,7 +277,7 @@ SWEP.CrouchPos = Vector(-0.7, -3.8, .35)
 SWEP.CrouchAng = Angle(0, 0, -1)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(15.5, 25, 6)
+SWEP.CustomizePos = Vector(17, 25, 6)
 SWEP.CustomizeSnapshotFOV = 95
 SWEP.CustomizeRotateAnchor = Vector(15.5, -4.28, -5.23)
 
@@ -404,7 +407,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
             end
             local rand = swep.EFTInspectnum
             if rand == 3 then swep.EFTInspectnum = 0 rand = 0 end
-            if empty and rand == 0 then swep.EFTInspectnum = 1 rand = 1 end
+            -- if empty and rand == 0 then swep.EFTInspectnum = 1 rand = 1 end
             
             if rand == 2 and !nomag then -- mag
                 ending = "_mag_" .. ending
@@ -459,8 +462,8 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         { s =  path .. "kedr_magrelease_button.wav", t = 0.37 },
         { s =  path .. "sr2m_mag_out.ogg", t = 0.46 },
         { s =  path .. "sr2m_flip_01.ogg", t = 1.86 },
-        { s =  path .. "sr2m_mag_in_rattle.ogg", t = 2.03 },
-        { s =  path .. "sr2m_mag_in.ogg", t = 2.36 },
+        { s =  path .. "sr2m_mag_in_rattle.ogg", t = 2.03-0.1 },
+        { s =  path .. "sr2m_mag_in.ogg", t = 2.36-0.15 },
         { s =  path .. "sr2m_flip_02.ogg", t = 2.92 },
         { s =  path .. "sr2m_hand_02.ogg", t = 3.04 },
     }
@@ -628,8 +631,8 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
                 { s =  path .. "sr2m_flip_02.ogg", t = 0.67 },
                 { s = pouchout, t = 0.64 },
                 { s = randspin, t = 1.12 },
-                { s =  path .. "sr2m_mag_in_rattle.ogg", t = 1.34 },
-                { s =  path .. "sr2m_mag_in.ogg", t = 1.62 },
+                { s =  path .. "sr2m_mag_in_rattle.ogg", t = 1.34-0.1 },
+                { s =  path .. "sr2m_mag_in.ogg", t = 1.62-0.15 },
                 { s =  path .. "sr2m_flip_01.ogg", t = 2.22 },
                 { s = path .. "sr2m_slider_out.ogg", t = 2.56 },
                 { s = path .. "sr2m_slider_in.ogg", t = 2.75 },
@@ -654,8 +657,8 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
                 { s =  path .. "sr2m_flip_02.ogg", t = 0.67 },
                 { s = pouchout, t = 0.64 },
                 { s = randspin, t = 1.12+0.04 },
-                { s =  path .. "sr2m_mag_in_rattle.ogg", t = 1.34+0.04 },
-                { s =  path .. "sr2m_mag_in.ogg", t = 1.72+0.04 },
+                { s =  path .. "sr2m_mag_in_rattle.ogg", t = 1.34+0.04-0.1 },
+                { s =  path .. "sr2m_mag_in.ogg", t = 1.72+0.04-0.15 },
                 { s =  path .. "sr2m_flip_01.ogg", t = 2.22+0.04 },
                 { s = path .. "sr2m_slider_out.ogg", t = 2.56+0.04 },
                 { s = path .. "sr2m_slider_in.ogg", t = 2.75+0.04 },
@@ -895,7 +898,7 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         Category = "eft_sr2m_muzzle",
         Bone = "mod_muzzle",
-        -- Installed = "eft_ash12_muzzle_std",
+        Installed = "eft_sr2m_handstop",
         Pos = Vector(0, 0.1, 0),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
@@ -903,6 +906,7 @@ SWEP.Attachments = {
     {
         PrintName = "Handguard",
         Category = "eft_sr2m_hg",
+        Installed = "eft_sr2m_hg_std",
         Bone = "mod_reciever",
         Pos = Vector(0, 5, -1),
         Ang = Angle(0, 0, 0),
@@ -911,6 +915,7 @@ SWEP.Attachments = {
     {
         PrintName = "Pistol Grip",
         Category = "eft_sr2m_pg",
+        Installed = "eft_sr2m_pg_std",
         Bone = "mod_reciever",
         Pos = Vector(0, -1, -3),
         Ang = Angle(0, -90, 0),
@@ -919,6 +924,7 @@ SWEP.Attachments = {
     {
         PrintName = "Dust cover",
         Category = "eft_sr2m_rec",
+        Installed = "eft_sr2m_rec_std",
         Bone = "mod_reciever",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, -90, 0),
@@ -929,7 +935,7 @@ SWEP.Attachments = {
         Category = "eft_ammo_9x21",
         Bone = "mod_magazine",
         Integral = true,
-        -- Installed = "eft_ammo_12755_ps12",
+        Installed = "eft_ammo_9x21_p",
         Pos = Vector(0, -0, -4),
         Ang = Angle(0, 0, 0),
     },
@@ -937,7 +943,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         Category = "eft_mag_sr2m",
         Bone = "mod_magazine",
-        -- Installed = "eft_ash12_mag_10",
+        Installed = "eft_sr2m_mag_20",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, -1),
@@ -946,7 +952,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Category = "eft_sr2m_stock",
         Bone = "mod_reciever",
-        -- Installed = "eft_ash12_mag_10",
+        Installed = "eft_sr2m_stock_std",
         Pos = Vector(0, -7, -1.5),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),

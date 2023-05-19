@@ -27,8 +27,10 @@ SWEP.Credits = {
 SWEP.Description = [[The SR-1MP pistol (GRAU index - 6P53), also known as "Gyurza" (Viper) or SPS ("Samozaryádnyy Pistolyét Serdyukóva" - Serdyukov Semiautomatic Pistol), was designed by P. Serdyukov and I. Belyaev with the powerful 9x21 cartridge to replace the APS machine pistol used by the special forces of the Russian Federation. This model can be fitted with a set of mounts to attach additional equipment, as well as work as a base for installing a suppressor.]]
 
 
--- SWEP.StandardPresets = {
--- }
+SWEP.StandardPresets = {
+    "[Tactical 1]XQAAAQDlAAAAAAAAAAA9iIIiM7tuo1AtT00OeFD3X0marJ1ZRQS4GC2Y+o3rtKYuQoE0eE2QXXCoVIYUbjA70tpp4u5T5kUHV+2vt0DZXJ+5s2hwuqPhvof1oCGvj6kr/RcOfjJatuuZEdGUxjleM5R/8vWJrkPpJQiSw6Mpbk0m",
+    "[Tactical 2]XQAAAQADAQAAAAAAAAA9iIIiM7tuo1AtT00OeFD3X0marJ1ZRQS4GC2fQM3rtKYuQoE0eE2QXXCoVIYUbjA70tpp4u5T5kUHV+2vt0DZXJOu4xFrIzgbQWmssQjYaLh9VEWv4xSo2op536w/4kIAHugDPK8MCpEWDejCDknIPG+vnqo="
+}
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_sr1mp.mdl"
 SWEP.WorldModel = "models/weapons/w_pist_glock18.mdl"
@@ -111,7 +113,7 @@ SWEP.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_sr1mp.mdl" -- S
 --     "arc9_eft_shared/weap_magdrop_plastic.ogg"
 -- } -- Table of sounds a dropped magazine should play.
 SWEP.DropMagazineAmount = 0 -- Amount of mags to drop.
-SWEP.DropMagazineTime = 0.66*0.85
+SWEP.DropMagazineTime = 0.55*0.85
 SWEP.DropMagazineQCA = 4
 SWEP.DropMagazinePos = Vector(0, 0, 0)
 SWEP.DropMagazineAng = Angle(90, 180, 90)
@@ -247,7 +249,7 @@ SWEP.CrouchPos = Vector(-0.7, -3.8, .35)
 SWEP.CrouchAng = Angle(0, 0, -1)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(21.7, 25, 3.5)
+SWEP.CustomizePos = Vector(21.7, 25, 4.5)
 SWEP.CustomizeSnapshotFOV = 70
 SWEP.CustomizeRotateAnchor = Vector(21.6, -4.28, -5.23)
 
@@ -411,53 +413,14 @@ local slidelockgrab = {"arc9_eft_shared/pistol_jam_slidelock_grab1.ogg", "arc9_e
 local pouchin = {"arc9_eft_shared/generic_mag_pouch_in1.ogg","arc9_eft_shared/generic_mag_pouch_in2.ogg","arc9_eft_shared/generic_mag_pouch_in3.ogg","arc9_eft_shared/generic_mag_pouch_in4.ogg","arc9_eft_shared/generic_mag_pouch_in5.ogg","arc9_eft_shared/generic_mag_pouch_in6.ogg","arc9_eft_shared/generic_mag_pouch_in7.ogg"}
 local pouchout = {"arc9_eft_shared/generic_mag_pouch_out1.ogg","arc9_eft_shared/generic_mag_pouch_out2.ogg","arc9_eft_shared/generic_mag_pouch_out3.ogg","arc9_eft_shared/generic_mag_pouch_out4.ogg","arc9_eft_shared/generic_mag_pouch_out5.ogg","arc9_eft_shared/generic_mag_pouch_out6.ogg","arc9_eft_shared/generic_mag_pouch_out7.ogg"}
 
-local rst_single = {
-    { s = randspin, t = 0.05 },
-    { s = randspin, t = 0.4 },
-    { s = path .. "gyrza_slide_out.ogg", t = 0.75 },
-    { s = "arc9_eft_shared/weap_round_pullout.ogg", t = 1.1},
-    { s = randspin, t = 1.53 },
-    { s =  pathgenericpistol .. "generic_jam_shell_ remove_medium3.ogg", t = 1.82  },
-    { s = randspin, t = 2.25 },
-    { s =  pathgenericpistol .. "pm_catch_slider.ogg", t = 2.75 },
-    { s = randspin, t = 3.08 },
-}
-
-local rst_def = {
-    { s = randspin, t = 0.1 },
-    { s =  pathgenericpistol .. "kedr_fireselector_up.ogg", t = 0.46 }, -- eft devs redarded
-    { s =  path .. "fiveseven_mag_out.ogg", t = 0.55 },
-    { s = pouchin, t = 1.2 },
-    { s = pouchout, t = 1.6 },
-    { s = randspin, t = 1.7 },
-    { s =  path .. "fiveseven_mag_in.ogg", t = 2.35 },
-    { s = randspin, t = 3.12 },
-}
-
-local rst_empty = {
-    { s = randspin, t = 0.1 },    
-    { s =  pathgenericpistol .. "kedr_fireselector_up.ogg", t = 0.35 }, -- eft devs redarded
-    { s =  path .. "fiveseven_mag_out.ogg", t = 0.5 },
-    { s =  randspin, t = 0.53 },
-    { s =  randspin, t = 1.04 },
-    { s = pouchout, t = 1.15 },
-    { s =  path .. "fiveseven_mag_in.ogg", t = 1.69 },
-    { s = randspin, t = 2.24 },  
-    { s =  pathgenericpistol .. "pm_catch_slider.ogg", t = 2.67 },
-    { s = randspin, t = 2.95 },
-    {hide = 0, t = 0},
-    {hide = 1, t = 0.66},
-    {hide = 0, t = 1.15}
-}
-
 local rst_magcheck = {
     { s = randspin, t = 0.1 },
-    { s =  pathgenericpistol .. "kedr_fireselector_up.ogg", t = 0.23},
-    { s =  path .. "fiveseven_mag_out.ogg", t = 0.33 },
-    { s = randspin, t = 0.48 },
-    { s = randspin, t = 0.98 },
-    { s =  path .. "fiveseven_mag_in.ogg", t = 2.91 },
-    { s = randspin, t = 3.38 },
+    { s =  pathgenericpistol .. "kedr_fireselector_up.ogg", t = 0.32},
+    { s =  path .. "fiveseven_mag_out.ogg", t = 0.38 },
+    { s =  path .. "fiveseven_mag_rattle2.ogg", t = 1.83 },
+    { s =  path .. "fiveseven_mag_rattle3.ogg", t = 2.78 },
+    { s =  path .. "fiveseven_mag_in.ogg", t = 2.99 },
+    { s = randspin, t = 3.17 },
 }
 
 SWEP.Animations = {
@@ -470,8 +433,8 @@ SWEP.Animations = {
         Source = {"ready0", "ready1", "ready2"},
         EventTable = {
             { s = "arc9_eft_shared/pm_draw.ogg", t = 0.05 },
-            { s = path .. "gyrza_slide_out.ogg", t = 0.58 },
-            { s = path .. "gyrza_slide_in.ogg", t = 0.75 },
+            { s = path .. "gyrza_slide_out.ogg", t = 0.55 },
+            { s = path .. "gyrza_slide_in.ogg", t = 0.71 },
         },
     },
 
@@ -523,7 +486,17 @@ SWEP.Animations = {
         Source = "reload_single",
         MinProgress = 0.9,
         FireASAP = true,
-        EventTable = rst_single
+        EventTable = {
+            { s = randspin, t = 0.05 },
+            { s = randspin, t = 0.4 },
+            { s = path .. "gyrza_slide_out.ogg", t = 0.5 },
+            { s = randspin, t = 1 },
+            { s = "arc9_eft_shared/weap_round_pullout.ogg", t = 1.25},
+            { s =  pathgenericpistol .. "generic_jam_shell_ remove_medium3.ogg", t = 1.79  },
+            { s = randspin, t = 2.21 },
+            { s =  pathgenericpistol .. "pm_catch_slider.ogg", t = 2.66 },
+            { s = randspin, t = 3.05 },
+        }
     },
 
     ["reload0"] = {
@@ -531,7 +504,16 @@ SWEP.Animations = {
         MinProgress = 0.9,
         Mult = 0.85,
         FireASAP = true,
-        EventTable = rst_def
+        EventTable = {
+            { s = randspin, t = 0.1 },
+            { s =  pathgenericpistol .. "kedr_fireselector_up.ogg", t = 0.22 }, -- eft devs redarded
+            { s =  path .. "fiveseven_mag_out.ogg", t = 0.33 },
+            { s = pouchin, t = 1.21 },
+            { s = pouchout, t = 1.53 },
+            { s =  path .. "fiveseven_mag_rattle3.ogg", t = 1.94 },
+            { s =  path .. "fiveseven_mag_in.ogg", t = 2.16 },
+            { s = randspin, t = 2.81 },
+        }
     },
 
     ["reload_empty0"] = {
@@ -539,7 +521,22 @@ SWEP.Animations = {
         MinProgress = 0.9,
         Mult = 0.85,
         FireASAP = true,
-        EventTable = rst_empty
+        EventTable = {
+            { s = randspin, t = 0.1 },    
+            { s =  pathgenericpistol .. "kedr_fireselector_up.ogg", t = 0.35 }, -- eft devs redarded
+            { s =  randspin, t = 0.36 },
+            { s =  path .. "fiveseven_mag_out.ogg", t = 0.38 },
+            { s =  randspin, t = 0.71 },
+            { s = pouchout, t = 0.94 },
+            { s =  path .. "fiveseven_mag_rattle3.ogg", t = 1.52 },
+            { s =  path .. "fiveseven_mag_in.ogg", t = 1.93 },
+            { s =  pathgenericpistol .. "pm_catch_slider.ogg", t = 2.17 },
+            { s = randspin, t = 2.24 },
+            { s = randspin, t = 2.54 },
+            {hide = 0, t = 0},
+            {hide = 1, t = 0.55},
+            {hide = 0, t = 1.15}
+        }
     },
 
     ["toggle"] = {
@@ -566,14 +563,14 @@ SWEP.Animations = {
         Source = "jam_shell",
         EventTable = {
             { s = randspin, t = 0.05 },
-            { s = randspin, t = 0.59 },
-            { s = randspin, t = 1.04 },
-            { s = slidelockgrab, t = 1.67 },
-            { s = slidelockgrab, t = 2.07 },
-            { s = randspin, t = 2.13 },
-            { s = "arc9_eft_shared/weap_round_out.ogg", t = 2.18 },
-            { s =  path .. "gyrza_slide_in.ogg", t = 2.38 },
-            { s = randspin, t = 2.7 },
+            { s = randspin, t = 0.7 },
+            { s = randspin, t = 1.2 },
+
+            { s = slidelockgrab, t = 1.65 },
+            { s = randspin, t = 1.92 },
+            { s = randspin, t = 2.41 },
+            { s =  pathgenericpistol .. "generic_jam_shell_ remove_medium3.ogg", t = 2.44  },
+            { s = path .. "gyrza_slide_in_check.ogg", t = 2.79 },
         },
         -- EjectAt = 1.97
     },        
@@ -582,33 +579,37 @@ SWEP.Animations = {
         Source = "jam_hardjam",
         EventTable = {
             { s = randspin, t = 0.05 },
-            { s = randspin, t = 0.59 },
-            { s = randspin, t = 1.04 },
+            { s = randspin, t = 0.7 },
+            { s = randspin, t = 1.2 },
 
-            { s = slidelockgrab, t = 1.54 },
-            { s = slidelockgrab, t = 1.89 },
-            { s = randspin, t = 2.55 },
-            { s = slidelockgrab, t = 3.03 },
-            { s =  path .. "gyrza_slide_in.ogg", t = 3.72 },
-            { s = "arc9_eft_shared/weap_round_out.ogg", t = 3.8 },
-            { s =  path .. "gyrza_slide_out.ogg", t = 4.03 },
-            { s = randspin, t = 4.46 },
+            { s = slidelockgrab, t = 1.5 },
+            { s = slidelockgrab, t = 1.75 },
+            { s = slidelockgrab, t = 2.02 },
+            { s = slidelockgrab, t = 2.45 },
+            { s = randspin, t = 2.78 },
+            { s =  path .. "gyrza_slide_in.ogg", t = 3.63 },
+            { s = "arc9_eft_shared/weap_round_out.ogg", t = 3.72 },
+            { s =  path .. "gyrza_slide_out.ogg", t = 3.87 },
+            { s = randspin, t = 4.23 },
         },
-        EjectAt = 3.8
+        EjectAt = 3.72
     },      
     
     ["jam2"] = {
         Source = "jam_feed",
         EventTable = {
             { s = randspin, t = 0.05 },
-            { s = randspin, t = 0.59 },
-            { s = randspin, t = 1.07 },
-            { s = slidelockgrab, t = 1.57 },
-            { s = slidelockgrab, t = 2.05 },
-            { s =  path .. "gyrza_slide_in.ogg", t = 2.48 },
-            { s = "arc9_eft_shared/weap_round_out.ogg", t = 2.51 },
-            { s =  path .. "gyrza_slide_out.ogg", t = 2.79 },
-            { s = randspin, t = 3.24 },
+            { s = randspin, t = 0.7 },
+            { s = randspin, t = 1.2 },
+
+            { s = slidelockgrab, t = 1.61 },
+            { s =  path .. "gyrza_slide_in.ogg", t = 2.14 },
+            { s = randspin, t = 2.42 },
+            { s = randspin, t = 2.85 },
+            { s = "arc9_eft_shared/weap_round_out.ogg", t = 2.88 },
+            { s = randspin, t = 3.23 },
+            { s =  path .. "gyrza_slide_out.ogg", t = 3.51 },
+            { s = randspin, t = 3.85 },
         },
         -- EjectAt = 2.52
     },        
@@ -617,18 +618,16 @@ SWEP.Animations = {
         Source = "jam_softjam",
         EventTable = {
             { s = randspin, t = 0.05 },
-            { s = randspin, t = 0.59 },
-            { s = randspin, t = 1.07 },
+            { s = randspin, t = 0.7 },
+            { s = randspin, t = 1.2 },
             
-            { s = slidelockgrab, t = 1.61 },
-            { s = randspin, t = 2.28 },
-            { s = slidelockgrab, t = 2.8 },
-            { s =  path .. "gyrza_slide_in.ogg", t = 3.17 },
-            { s = "arc9_eft_shared/weap_round_out.ogg", t = 3.24 },
-            { s =  path .. "gyrza_slide_out.ogg", t = 3.61 },
-            { s = randspin, t = 4 },
+            { s = slidelockgrab, t = 1.6 },
+            { s =  path .. "gyrza_slide_in.ogg", t = 2.08 },
+            { s = "arc9_eft_shared/weap_round_out.ogg", t = 2.2 },
+            { s =  path .. "gyrza_slide_out.ogg", t = 2.33 },
+            { s = randspin, t = 2.61 },
         },
-        EjectAt = 3.24
+        EjectAt = 2.2
     },
 
     ["inspect"] = { -- TO STUPID ARK NINE SEE WE HAVE INSPECT
@@ -641,18 +640,18 @@ SWEP.Animations = {
     ["inspect1"] = {
         Source = "inspect",
         EventTable = {
-            { s = randspin, t = 0.09 },
-            { s = randspin, t = 1.44 },
-            { s = randspin, t = 2.76 },
+            { s = randspin, t = 0.11 },
+            { s = randspin, t = 1.57 },
+            { s = randspin, t = 2.87 },
         }
     },
 
     ["inspect_empty"] = {
         Source = "inspect_empty",
         EventTable = {
-            { s = randspin, t = 0.09 },
-            { s = randspin, t = 1.44 },
-            { s = randspin, t = 2.76 },
+            { s = randspin, t = 0.11 },
+            { s = randspin, t = 1.57 },
+            { s = randspin, t = 2.87 },
         }
     },
 
@@ -669,9 +668,9 @@ SWEP.Animations = {
         Source = "checkchamber",
         EventTable = {
             { s = randspin, t = 0.1 },
-            { s = path .. "gyrza_slide_out_check.ogg", t = 0.56 },
-            { s = path .. "gyrza_slide_in_check.ogg", t = 1.16 },
-            { s = randspin, t = 1.38 },
+            { s = path .. "gyrza_slide_out_check.ogg", t = 0.55 },
+            { s = path .. "gyrza_slide_in_check.ogg", t = 1.13 },
+            { s = randspin, t = 1.4 },
         }
     },
 }
@@ -679,9 +678,24 @@ SWEP.Animations = {
 SWEP.ReloadHideBoneTables = {
     [1] = {
         "mod_magazine",
+        "patron_in_mag0",
         "patron_in_mag1",
         "patron_in_mag2",
-        "patron_in_mag3"
+        "patron_in_mag3",
+        "patron_in_mag4",
+        "patron_in_mag5",
+        "patron_in_mag6",
+        "patron_in_mag7",
+        "patron_in_mag8",
+        "patron_in_mag9",
+        "patron_in_mag10",
+        "patron_in_mag11",
+        "patron_in_mag12",
+        "patron_in_mag13",
+        "patron_in_mag14",
+        "patron_in_mag15",
+        "patron_in_mag16",
+        "patron_in_mag17",
     },
 }
 
@@ -731,14 +745,14 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(-0.85, 0, -1.5),
-        -- Installed = "eft_mag_m9a3_std"
+        Installed = "eft_mag_sr1mp_std"
     },   
     {
         PrintName = "Ammunition",
         Category = "eft_ammo_9x21",
         Bone = "mod_magazine",
         Integral = true,
-        -- Installed = "eft_ammo_9x19_pst_gzh",
+        Installed = "eft_ammo_9x21_p",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(-0.85, 0, -3),
@@ -755,7 +769,7 @@ SWEP.Attachments = {
     },
 }
 
-SWEP.EFTErgo = 70
+SWEP.EFTErgo = 82
 if ARC9EFTBASE then
     SWEP.AimDownSightsTimeHook = ARC9EFT.ErgoHook or nil
     SWEP.HoldBreathTimeHook = ARC9EFT.ErgoBreathHook or nil

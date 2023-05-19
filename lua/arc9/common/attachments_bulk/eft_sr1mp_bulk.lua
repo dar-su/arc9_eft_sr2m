@@ -6,7 +6,7 @@ ATT = {}
 
 ATT.PrintName = "SR-1MP 9x21 sound suppressor"
 ATT.CompactName = "SR-1MP"
-ATT.Icon = Material("entities/eft_sr2m_attachments/s.png", "mips smooth")
+ATT.Icon = Material("entities/eft_sr2m_attachments/sil.png", "mips smooth")
 ATT.Description = [[A standard-issue sound suppressor from the SR-1MP pistol kit. Requires a rail mount to be installed on the weapon.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -18,6 +18,8 @@ ATT.VisualRecoilMult = 0.9
 ATT.PhysBulletMuzzleVelocityMult = 1.005
 ATT.HeatCapacityMult = 0.88
 -- ATT.SpreadMult = 0.99
+
+ATT.CustomizePos = Vector(25.5, 25, 4.5)
 
 ATT.Silencer = true 
 ATT.BarrelLengthAdd = 5
@@ -36,7 +38,7 @@ ATT = {}
 
 ATT.PrintName = "SR-1MP single rail mount"
 ATT.CompactName = "SR-1MP 1x"
-ATT.Icon = Material("entities/eft_m9a3_attachments/bridge.png", "mips smooth")
+ATT.Icon = Material("entities/eft_sr2m_attachments/1x.png", "mips smooth")
 ATT.Description = [[A mount for SR-1MP, included in the pistol kit, designed to form a single rail and silencer installation place.]]
 
 ATT.EFTErgoAdd = -1
@@ -72,7 +74,7 @@ ATT = {}
 
 ATT.PrintName = "SR-1MP sound suppressor mount"
 ATT.CompactName = "SR-1MP mount"
-ATT.Icon = Material("entities/eft_m9a3_attachments/bridge.png", "mips smooth")
+ATT.Icon = Material("entities/eft_sr2m_attachments/sm.png", "mips smooth")
 ATT.Description = [[A mount for SR-1MP from the pistol kit, used for quick installation and removal of the sound suppressor.]]
 
 ATT.EFTErgoAdd = -1
@@ -87,7 +89,7 @@ ATT.Attachments = {
     {
         PrintName = "Silencer",
         Category = "eft_silencerrr_sr1mp",
-        Pos = Vector(-0.7, 0, 0.2),
+        Pos = Vector(-1.2, 0, -0.85),
         Ang = Angle(0, 0, 180),
         Icon_Offset = Vector(0, 0, 0),
     },
@@ -101,7 +103,7 @@ ATT = {}
 
 ATT.PrintName = "SR-1MP quad rail mount"
 ATT.CompactName = "SR-1MP 4x"
-ATT.Icon = Material("entities/eft_m9a3_attachments/bridge.png", "mips smooth")
+ATT.Icon = Material("entities/eft_sr2m_attachments/4x.png", "mips smooth")
 ATT.Description = [[A mount for the SR-1MP pistol that forms four guide rails, allowing installation of the sound suppressor.]]
 
 ATT.EFTErgoAdd = -1
@@ -114,16 +116,16 @@ ATT.Category = {"eft_mount_sr1mp"}
 
 ATT.Attachments = {
     {
-        PrintName = "Optic",
-        Category = "eft_optic_small",
-        Pos = Vector(0.7, 0, 2.4),
+        PrintName = "Mount",
+        Category = "eft_silmount_sr1mp",
+        Pos = Vector(-0.7, 0, 0.2),
         Ang = Angle(0, 0, 180),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Mount",
-        Category = "eft_silmount_sr1mp",
-        Pos = Vector(-0.7, 0, 0.2),
+        PrintName = "Optic",
+        Category = "eft_optic_small",
+        Pos = Vector(0.7, 0, 2.4),
         Ang = Angle(0, 0, 180),
         Icon_Offset = Vector(0, 0, 0),
     },
@@ -160,11 +162,12 @@ ATT = {}
 
 ATT.PrintName = "SR-1MP 9x21 18-round magazine"
 ATT.CompactName = "SR-1MP 18"
-ATT.Icon = Material("entities/eft_sr2m_attachments/20.png", "mips smooth")
+ATT.Icon = Material("entities/eft_sr2m_attachments/18.png", "mips smooth")
 ATT.Description = [[A standard 18-round 9x21 magazine for the SR-1MP pistol.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
+ATT.DropMagazineAmount = 1
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_sr1mp.mdl"
 
 ATT.EFTErgoAdd = -1
