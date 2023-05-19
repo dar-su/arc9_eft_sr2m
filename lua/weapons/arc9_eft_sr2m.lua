@@ -36,7 +36,7 @@ SWEP.WorldModel = "models/weapons/w_smg_mac10.mdl"
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_sr2m.mdl"
 SWEP.ViewModelFOVBase = 65
 SWEP.MirrorVMWM = true
-SWEP.DefaultBodygroups = "00000000000000"
+SWEP.DefaultBodygroups = "000000000000000000"
 
 
 ------------------------- [[[           STATS            ]]] -------------------------
@@ -92,7 +92,7 @@ SWEP.DamageLookupTable = {
 
 
 --          Spread
-SWEP.Spread = 0.344 * ARC9.MOAToAcc
+SWEP.Spread = 7.9 * ARC9.MOAToAcc
 SWEP.SpreadAddHipFire = 0.03
 SWEP.SpreadMultMove = 1.5
 SWEP.SpreadAddMove = 0.015
@@ -130,7 +130,7 @@ SWEP.VisualRecoilMultSights = 0.1
 SWEP.VisualRecoilMultCrouch = 0.5
 
 SWEP.VisualRecoilCenter = Vector(2, 17, 2)
-SWEP.VisualRecoilUp = 200*0.85
+SWEP.VisualRecoilUp = 150*0.85
 SWEP.VisualRecoilSide = 10 
 SWEP.VisualRecoilRoll = 33 -- Roll tilt
 
@@ -138,7 +138,7 @@ SWEP.VisualRecoilPunch = 60 -- How far back visual recoil moves the gun
 SWEP.VisualRecoilPunchSights = -450 -- How far back visual recoil moves the gun
 
 
-SWEP.VisualRecoilSpringPunchDamping = 16
+SWEP.VisualRecoilSpringPunchDamping = 8
 SWEP.VisualRecoilDampingConst = 350
 SWEP.VisualRecoilSpringMagnitude = 2 / 1.67
 SWEP.VisualRecoilPositionBumpUp = -0.05 
@@ -162,9 +162,9 @@ SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount)
     if recamount > 2 then
         recamount = 1.25 - math.Clamp((recamount - 2) / 5, 0, 1)
         
-        local fakerandom = (((69+recamount%5*CurTime()%3)*2420)%4) * (1-recamount) * 0.5
+        local fakerandom = (((69+recamount%5*CurTime()%3)*2420)%4) * (1-recamount) * 1.5
         
-        return up * recamount + fakerandom, side * 10, roll, punch * 0.5
+        return up * recamount + fakerandom, side * 5, roll, punch * 0.5
     elseif recamount == 1 then
         return up * 1.5, side * 16, roll, punch
     end
@@ -855,10 +855,10 @@ SWEP.AttachmentElements = {
     ["eft_sr2m_handstop"] = { Bodygroups = { {5, 1} } },
     ["eft_sr2m_silencer"] = { Bodygroups = { {5, 2} } },
 
-    ["eft_sr2m_stock_std"] = { Bodygroups = { {6, 1} } },
+    -- ["eft_sr2m_stock_std"] = { Bodygroups = { {6, 1} } },
     ["eft_sr2m_stock_std_unfolded"] = { Bodygroups = { {6, 1} } },
     ["eft_sr2m_stock_std_folded"] = { Bodygroups = { {6, 2} } },
-    ["eft_sr2m_stock_mp"] = { Bodygroups = { {6, 3} } },
+    -- ["eft_sr2m_stock_mp"] = { Bodygroups = { {6, 3} } },
     ["eft_sr2m_stock_mp_unfolded"] = { Bodygroups = { {6, 3} } },
     ["eft_sr2m_stock_mp_folded"] = { Bodygroups = { {6, 4} } },
 

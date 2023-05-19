@@ -150,13 +150,13 @@ SWEP.ViewRecoilSideMult = 300
 
 SWEP.UseVisualRecoil = true 
 
-SWEP.VisualRecoil = 1.03*0.85
+SWEP.VisualRecoil = 1.03*0.85*0.85
 SWEP.VisualRecoilMultSights = 1
 SWEP.VisualRecoilMultCrouch = 0.5
 
 SWEP.VisualRecoilUp = 45 * 0.85 -- patch 0.13.0.4.22617
 -- SWEP.VisualRecoilUp = 45
-SWEP.VisualRecoilSide = 333 -- Horizontal tilt for visual recoil.
+SWEP.VisualRecoilSide = 222 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 6 -- Roll tilt for visual recoil.
 
 SWEP.VisualRecoilCenter = Vector(2, 17, 2) -- The "axis" of visual recoil. Where your hand is.
@@ -165,9 +165,9 @@ SWEP.VisualRecoilPunch = 1 -- How far back visual recoil moves the gun.
 SWEP.VisualRecoilPunchMultSights = 0.5
 SWEP.VisualRecoilPositionBumpUp = -0.009
 
-SWEP.VisualRecoilSpringPunchDamping = 8.2
+SWEP.VisualRecoilSpringPunchDamping = 9
 SWEP.VisualRecoilDampingConst = 1000 
-SWEP.VisualRecoilSpringMagnitude = 1 / 1.67
+SWEP.VisualRecoilSpringMagnitude = 1 / 1.3
 
 
 
@@ -179,7 +179,7 @@ SWEP.RecoilKickDamping = 10 -- Camera recoil damping
 
 -------------------------- SPREAD
 
-SWEP.Spread = 9.97 * ARC9.MOAToAcc
+SWEP.Spread = 7.563 * ARC9.MOAToAcc
 SWEP.SpreadAddHipFire = 0.03
 SWEP.SpreadMultMove = 1.5
 SWEP.SpreadAddMove = 0.015
@@ -727,6 +727,11 @@ SWEP.AttachmentElements = {
     ["eft_mount_sr1mp_4x"]    = { Bodygroups = { {2, 2} } },
     ["eft_mount_sr1mp_sil"]    = { Bodygroups = { {3, 1} } },
     ["eft_silencer_sr1mp"]    = { Bodygroups = { {4, 1} } },
+
+    ["eft_ammo_9x21_bt"] = { Skin = 3 },
+    ["eft_ammo_9x21_ps"] = { Skin = 0 },
+    ["eft_ammo_9x21_p"] = { Skin = 1 },
+    ["eft_ammo_9x21_pe"] = { Skin = 2 },
 }
 
 SWEP.Attachments = { 
