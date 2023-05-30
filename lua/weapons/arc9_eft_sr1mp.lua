@@ -267,7 +267,7 @@ SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_REVOLVER
 SWEP.WorldModelOffset = {
     Pos = Vector(-15.5, 5.5, -4),
     Ang = Angle(-7, 0, 180),
-    TPIKPos = Vector(-2, 8, -5), -- rpg
+    TPIKPos = Vector(-4, 8, -5), -- rpg
     TPIKAng = Angle(-5, 0, 180),
     Scale = 1
 }
