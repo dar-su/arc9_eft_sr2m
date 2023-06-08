@@ -3,9 +3,9 @@
 
 "VertexLitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/darsu_eft/sr2m/silencer_sr1mp_tochmash_sr1mp_std_9x21_LOD0_diff"
-	"$bumpmap" "models/weapons/arc9/darsu_eft/sr2m/silencer_sr1mp_tochmash_sr1mp_std_9x21_LOD0_nrm"
-	"$phongexponenttexture" "models/weapons/arc9/darsu_eft/sr2m/silencer_sr1mp_tochmash_sr1mp_std_9x21_LOD0_gloss"
+	"$basetexture" "models/weapons/arc9/darsu_eft/sr1mp/silencer_sr1mp_tochmash_sr1mp_std_9x21_LOD0_diff"
+	"$bumpmap" "models/weapons/arc9/darsu_eft/sr1mp/silencer_sr1mp_tochmash_sr1mp_std_9x21_LOD0_nrm"
+	"$phongexponenttexture" "models/weapons/arc9/darsu_eft/sr1mp/silencer_sr1mp_tochmash_sr1mp_std_9x21_LOD0_gloss"
 	"$phong"		"1"
 	"$phongboost"	"6"
 	"$blendtintbybasealpha"	"1"
@@ -19,4 +19,23 @@
 
 	"$envmaptint" "[0.05 0.05 0.05]"
 	"$color2" "[0.88 0.88 0.88]"
+
+	"$detail" "models/weapons/arc9/darsu_eft/sr1mp/sr1sil_heat"
+    "$detailscale" "1"
+    "$detailblendfactor" "0"
+    "$detailblendmode" "5"
+	
+	"Proxies"
+     {
+        "Arc9EnvMapTint"
+        {
+            "specularity" "0.5"
+            "min" "0"
+            "max" "0.1"
+        }
+
+    	"ARC9_Heat" {
+			blend $detailblendfactor
+    	}
+     }
 }
