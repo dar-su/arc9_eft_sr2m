@@ -172,6 +172,9 @@ SWEP.VisualRecoilPositionBumpUp = -0.1
 SWEP.VisualRecoilPositionBumpUpRTScope = 0.00
 SWEP.VisualRecoilPositionBumpUpHipFire = -0.05
 
+-- There's a bug with the new visual recoil fixes.
+SWEP.VisualRecoilEmergency = 1.5
+
 SWEP.RecoilKick = 0
 SWEP.RecoilKickDamping = 10
 
