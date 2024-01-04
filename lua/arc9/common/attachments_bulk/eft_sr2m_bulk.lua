@@ -494,6 +494,160 @@ ARC9.LoadAttachment(ATT, "eft_sr2m_mag_30")
 
 
 
+///////////////////////////////////////      eft_ammo_9x21_7u4
+
+ATT = {}
+
+ATT.PrintName = "9x21mm 7U4"
+ATT.CompactName = "7U4"
+ATT.Icon = Material("entities/eft_sr2m_attachments/bt.png", "mips smooth")
+ATT.Description = [[The 9x21mm 7U4 round (GRAU index - 7U4) with reduced bullet velocity, designed for flameless and low-noise firing. The cartridge features a cut edge on the front end of the core, formed by two flat edges, and increased weight.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.HasAmmoooooooo = true 
+
+ATT.EFTRoundName = "9x21mm 7U4"
+
+ATT.DamageMax = 47 * mult9
+ATT.DamageMin = 37 * mult9
+ATT.PhysBulletMuzzleVelocity = 300 /0.0254
+-- ATT.TracerNum = 1
+-- ATT.TracerColor = Color(255, 16, 16)
+-- ATT.SpreadMult = 1.04
+-- ATT.RecoilMult = 1.1
+-- ATT.VisualRecoilMult = 1.1
+-- ATT.HeatPerShotMult = 1
+
+ATT.RangeMin = 10
+ATT.RangeMax = 1000 /0.0254 * dmgrange
+
+ATT.Penetration =      27 *2.54/100/0.0254
+ATT.PenetrationDelta = 44/100
+ATT.ArmorPiercing =    44/100
+ATT.RicochetChance =   40/100
+
+ATT.DamageLookupTable = {
+    {   10/0.0254 * dmgrange, 
+    47 * mult9     },
+
+    {   100 /0.0254 * dmgrange, 
+    45 * mult9     },
+
+    {   200 /0.0254 * dmgrange, 
+    44 * mult9     },
+
+    {   300 /0.0254 * dmgrange, 
+    43 * mult9     },
+
+    {   400 /0.0254 * dmgrange, 
+    42 * mult9     },
+
+    {   500 /0.0254 * dmgrange, 
+    41 * mult9     },
+
+    {   600 /0.0254 * dmgrange, 
+    40 * mult9     },
+
+    {   700 /0.0254 * dmgrange, 
+    39.5 * mult9     },
+
+    {   800 /0.0254 * dmgrange, 
+    38.5 * mult9     },
+
+    {   900 /0.0254 * dmgrange, 
+    37.6 * mult9     },
+
+    {   1000 /0.0254 * dmgrange, 
+    37 * mult9     },
+}
+
+-- 100m     200m    300m    400m    500m    600m    700m    800m    900m    1000m
+-- 53.68	49.85	47.08	44.76	42.82	41.11	39.68	38.5	37.59	36.97
+
+
+ATT.Category = {"eft_ammo_9x21"}
+
+
+ARC9.LoadAttachment(ATT, "eft_ammo_9x21_7u4")
+
+///////////////////////////////////////      eft_ammo_9x21_7n42
+
+ATT = {}
+
+ATT.PrintName = "9x21mm 7N42 \"Zubilo\""
+ATT.CompactName = "7N42 \"Zubilo\""
+ATT.Icon = Material("entities/eft_sr2m_attachments/bt.png", "mips smooth")
+ATT.Description = [[The 9x21mm PP cartridge (GRAU Index - 7N42) with increased penetration bullet is designed to engage armored personnel. The head part of the core is made with a cut edge. This design ensures the tearing of the threads of the fabric base of the body armor and significantly increases the penetration of the bullet. The core protrudes from the jacket, which increases its penetration capability. The bullet head is colored black.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.HasAmmoooooooo = true 
+
+ATT.EFTRoundName = "9x21mm 7N42 \"Zubilo\""
+
+ATT.DamageMax = 45 * mult9
+ATT.DamageMin = 36 * mult9
+ATT.PhysBulletMuzzleVelocity = 400 /0.0254
+-- ATT.TracerNum = 1
+-- ATT.TracerColor = Color(255, 16, 16)
+ATT.SpreadMult = 1.03
+ATT.RecoilMult = 1.1
+ATT.VisualRecoilMult = 1.1
+ATT.HeatPerShotMult = 1.45
+
+ATT.RangeMin = 10
+ATT.RangeMax = 1000 /0.0254 * dmgrange
+
+ATT.Penetration =      38 *2.54/100/0.0254
+ATT.PenetrationDelta = 47/100
+ATT.ArmorPiercing =    47/100
+ATT.RicochetChance =   40/100
+
+ATT.DamageLookupTable = {
+    {   10/0.0254 * dmgrange, 
+    45 * mult9     },
+
+    {   100 /0.0254 * dmgrange, 
+    44 * mult9     },
+
+    {   200 /0.0254 * dmgrange, 
+    43 * mult9     },
+
+    {   300 /0.0254 * dmgrange, 
+    42 * mult9     },
+
+    {   400 /0.0254 * dmgrange, 
+    41 * mult9     },
+
+    {   500 /0.0254 * dmgrange, 
+    40 * mult9     },
+
+    {   600 /0.0254 * dmgrange, 
+    39 * mult9     },
+
+    {   700 /0.0254 * dmgrange, 
+    38 * mult9     },
+
+    {   800 /0.0254 * dmgrange, 
+    38 * mult9     },
+
+    {   900 /0.0254 * dmgrange, 
+    37 * mult9     },
+
+    {   1000 /0.0254 * dmgrange, 
+    36 * mult9     },
+}
+
+-- 100m     200m    300m    400m    500m    600m    700m    800m    900m    1000m
+-- 53.68	49.85	47.08	44.76	42.82	41.11	39.68	38.5	37.59	36.97
+
+
+ATT.Category = {"eft_ammo_9x21"}
+
+
+ARC9.LoadAttachment(ATT, "eft_ammo_9x21_7n42")
+
 ///////////////////////////////////////      eft_ammo_9x21_bt
 
 ATT = {}
@@ -509,7 +663,7 @@ ATT.HasAmmoooooooo = true
 
 ATT.EFTRoundName = "9x21mm BT gzh"
 
-ATT.DamageMax = 63 * mult9
+ATT.DamageMax = 49 * mult9
 ATT.DamageMin = 37 * mult9
 ATT.PhysBulletMuzzleVelocity = 410 /0.0254
 ATT.TracerNum = 1
@@ -522,23 +676,23 @@ ATT.SpreadMult = 1.04
 ATT.RangeMin = 10
 ATT.RangeMax = 1000 /0.0254 * dmgrange
 
-ATT.Penetration =      39 *2.54/100/0.0254
-ATT.PenetrationDelta = 47/100
-ATT.ArmorPiercing =    47/100
+ATT.Penetration =      32 *2.54/100/0.0254
+ATT.PenetrationDelta = 42/100
+ATT.ArmorPiercing =    42/100
 ATT.RicochetChance =   40/100
 
 ATT.DamageLookupTable = {
     {   10/0.0254 * dmgrange, 
-    63 * mult9     },
+    49 * mult9     },
 
     {   100 /0.0254 * dmgrange, 
-    53.7 * mult9     },
+    48 * mult9     },
 
     {   200 /0.0254 * dmgrange, 
-    50 * mult9     },
+    47 * mult9     },
 
     {   300 /0.0254 * dmgrange, 
-    47 * mult9     },
+    46 * mult9     },
 
     {   400 /0.0254 * dmgrange, 
     44.8 * mult9     },
@@ -586,7 +740,7 @@ ATT.HasAmmoooooooo = true
 
 ATT.EFTRoundName = "9x21mm PS gzh"
 
-ATT.DamageMax = 49 * mult9
+ATT.DamageMax = 54 * mult9
 ATT.DamageMin = 28.75 * mult9
 ATT.PhysBulletMuzzleVelocity = 410 /0.0254
 -- ATT.TracerNum = 1
@@ -599,14 +753,14 @@ ATT.PhysBulletMuzzleVelocity = 410 /0.0254
 ATT.RangeMin = 10
 ATT.RangeMax = 1000 /0.0254 * dmgrange
 
-ATT.Penetration =      35 *2.54/100/0.0254
-ATT.PenetrationDelta = 46/100
-ATT.ArmorPiercing =    46/100
+ATT.Penetration =      22 *2.54/100/0.0254
+ATT.PenetrationDelta = 39/100
+ATT.ArmorPiercing =    39/100
 ATT.RicochetChance =   40/100
 
 ATT.DamageLookupTable = {
     {   10/0.0254 * dmgrange, 
-    49 * mult9     },
+    54 * mult9     },
 
     {   100 /0.0254 * dmgrange, 
     41.75 * mult9     },
@@ -663,14 +817,14 @@ ATT.HasAmmoooooooo = true
 
 ATT.EFTRoundName = "9x21mm P gzh"
 
-ATT.DamageMax = 49 * mult9
+ATT.DamageMax = 65 * mult9
 ATT.DamageMin = 42.45 * mult9
 ATT.PhysBulletMuzzleVelocity = 413 /0.0254
 -- ATT.TracerNum = 1
 -- ATT.TracerColor = Color(255, 16, 16)
--- ATT.SpreadMult = 0.9
--- ATT.RecoilMult = 1.1
--- ATT.VisualRecoilMult = 1.1
+ATT.SpreadMult = 0.99
+ATT.RecoilMult = 0.97
+ATT.VisualRecoilMult = 0.97
 -- ATT.HeatPerShotMult = 1
 
 ATT.RangeMin = 10
@@ -745,9 +899,9 @@ ATT.DamageMin = 50.26 * mult9
 ATT.PhysBulletMuzzleVelocity = 415 /0.0254
 -- ATT.TracerNum = 1
 -- ATT.TracerColor = Color(255, 16, 16)
--- ATT.SpreadMult = 0.9
--- ATT.RecoilMult = 1.1
--- ATT.VisualRecoilMult = 1.1
+ATT.SpreadMult = 0.97
+ATT.RecoilMult = 0.95
+ATT.VisualRecoilMult = 0.95
 -- ATT.HeatPerShotMult = 1
 
 ATT.RangeMin = 10
