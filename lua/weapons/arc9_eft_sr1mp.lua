@@ -13,7 +13,7 @@ SWEP.Trivia = {
     [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = ARC9:GetPhrase("eft_trivia_manuf_tsniitochmash"),
     [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = ARC9:GetPhrase("eft_trivia_calibr_9x21"),
     [ARC9:GetPhrase("eft_trivia_act") .. "3"]= ARC9:GetPhrase("eft_trivia_act_recoil"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_italy"),
+    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_ru"),
     [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "2012"
 }
 
