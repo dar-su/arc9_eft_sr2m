@@ -368,8 +368,6 @@ ATT.Description = [[A folding stock for SR-2M submachine gun, manufactured by Ts
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.HasStock = true
-
 ATT.EFTErgoAdd = 7
 ATT.CustomPros = { Ergonomics = "+7", ["Recoil while extended"] = "-27%" }
 
@@ -380,7 +378,8 @@ ATT.ToggleStats = {
         PrintName = "Unfolded",
         RecoilMult = 0.73,
         VisualRecoilMult = 0.73,
-        ActivateElements = {"eft_sr2m_stock_std_unfolded"}
+        ActivateElements = {"eft_sr2m_stock_std_unfolded"},
+        HasStock = true
     },
     {
         PrintName = "Folded",
@@ -404,8 +403,6 @@ ATT.Description = [[A folding stock for SR-2MP submachine gun, manufactured by T
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.HasStock = true
-
 ATT.EFTErgoAdd = 8
 ATT.CustomPros = { Ergonomics = "+8", ["Recoil while extended"] = "-27%" }
 
@@ -416,7 +413,8 @@ ATT.ToggleStats = {
         PrintName = "Unfolded",
         RecoilMult = 0.73,
         VisualRecoilMult = 0.73,
-        ActivateElements = {"eft_sr2m_stock_mp_unfolded"}
+        ActivateElements = {"eft_sr2m_stock_mp_unfolded"},
+        HasStock = true
     },
     {
         PrintName = "Folded",
