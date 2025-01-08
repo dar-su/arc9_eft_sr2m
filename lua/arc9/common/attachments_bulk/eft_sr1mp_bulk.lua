@@ -180,5 +180,6 @@ ATT.ClipSize = 18
 ATT.MalfunctionMeanShotsToFailMult = 0.98
 
 ATT.Category = {"eft_sr1mp_mag"}
+ATT.ActivateElements = {"magdef"}
 
 ARC9.LoadAttachment(ATT, "eft_mag_sr1mp_std")
