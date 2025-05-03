@@ -6,17 +6,17 @@ SWEP.Spawnable = true
 ------------------------- |||           Trivia            ||| -------------------------
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_veresk")
-SWEP.Description = [[SR-2M "Veresk" is a compact submachine gun designed for a powerful 9x21mm armor-piercing cartridge by order of the FSB and the FSO of the Russian Federation. This submachine gun is part of a high-performance rifle complex designed for special forces. Equipped with a folding foregrip. Developed by TsNIItochmash.]]
+SWEP.Description = "eft_weapon_veresk_desc"
 
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_smg")
+SWEP.Class = "eft_class_weapon_smg"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_smg")
 
 SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = ARC9:GetPhrase("eft_trivia_manuf_tsniitochmash"),
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = ARC9:GetPhrase("eft_trivia_calibr_9x21"),
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = ARC9:GetPhrase("eft_trivia_act_gas"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_ru"),
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "2004"
+    ["eft_trivia_manuf1"] = "eft_trivia_manuf_tsniitochmash",
+    ["eft_trivia_cal2"] = "eft_trivia_calibr_9x21",
+    ["eft_trivia_act3"] = "eft_trivia_act_gas",
+    ["eft_trivia_country4"] = "eft_trivia_country_ru",
+    ["eft_trivia_year5"] = "2004"
 }
 
 SWEP.StandardPresets = {

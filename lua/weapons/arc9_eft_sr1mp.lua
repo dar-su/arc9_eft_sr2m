@@ -6,17 +6,17 @@ SWEP.Spawnable = true
 ------------------------- |||           Trivia            ||| -------------------------
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_gyurza")
-SWEP.Description = [[The SR-1MP pistol (GRAU index - 6P53), also known as "Gyurza" (Viper) or SPS ("Samozaryádnyy Pistolyét Serdyukóva" - Serdyukov Semiautomatic Pistol), was designed by P. Serdyukov and I. Belyaev with the powerful 9x21 cartridge to replace the APS machine pistol used by the special forces of the Russian Federation. This model can be fitted with a set of mounts to attach additional equipment, as well as work as a base for installing a suppressor.]]
+SWEP.Description = "eft_weapon_gyurza_desc"
 
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_pist")
+SWEP.Class = "eft_class_weapon_pist"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_pist")
 
 SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = ARC9:GetPhrase("eft_trivia_manuf_tsniitochmash"),
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = ARC9:GetPhrase("eft_trivia_calibr_9x21"),
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"]= ARC9:GetPhrase("eft_trivia_act_recoil"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_ru"),
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "2012"
+    ["eft_trivia_manuf1"] = "eft_trivia_manuf_tsniitochmash",
+    ["eft_trivia_cal2"] = "eft_trivia_calibr_9x21",
+    ["eft_trivia_act3"]= "eft_trivia_act_recoil",
+    ["eft_trivia_country4"] = "eft_trivia_country_ru",
+    ["eft_trivia_year5"] = "2012"
 }
 
 SWEP.StandardPresets = {
